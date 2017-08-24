@@ -1,19 +1,19 @@
 package com.kodilla.testing.calculator;
 
 public class Calculator {
-    static int a;
-    static int b;
+    int a;
+    int b;
 
     public Calculator(int a, int b) {
         this.a = a;
         this.b = b;
     }
 
-    public static int add() {
+    public int add() {
         return a + b;
     }
 
-    public static  int substract() {
+    public int substract() {
         return a - b;
     }
 }
