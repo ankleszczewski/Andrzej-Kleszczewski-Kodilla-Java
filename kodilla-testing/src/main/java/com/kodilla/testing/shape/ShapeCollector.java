@@ -11,12 +11,14 @@ public class ShapeCollector {
         this.shapes = shapes;
     }
 
-    String addFigure(Shape shape) {
-        return shape.getShapeName();
+    void addFigure(List<String> shapes, Shape shape) {
+        String figure = shape.getShapeName();
+        shapes.add(figure);
 
     }
-    String removeFigure(Shape shape) {
-        return shape.getShapeName();
+    void removeFigure(List<String> shapes, Shape shape) {
+        String figure = shape.getShapeName();
+        shapes.remove(figure);
     }
     String getFigure(List<String> shapes, int i) {
         return shapes.get(i);

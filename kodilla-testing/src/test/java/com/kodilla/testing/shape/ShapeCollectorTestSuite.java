@@ -32,7 +32,7 @@ public class ShapeCollectorTestSuite {
         shapeCollector.shapes.add("Circle");
         //When
         ShapeCollector testShapeCollector = new ShapeCollector(new ArrayList<String>());
-        testShapeCollector.shapes.add(shapeCollector.addFigure(new Circle()));
+        testShapeCollector.addFigure(testShapeCollector.shapes, new Circle());
         //Then
         Assert.assertEquals(shapeCollector.getShapes(), testShapeCollector.getShapes());
     }
@@ -50,7 +50,7 @@ public class ShapeCollectorTestSuite {
         testShapeCollector.shapes.add("Circle");
         testShapeCollector.shapes.add("Triangle");
         testShapeCollector.shapes.add("Square");
-        testShapeCollector.shapes.remove(shapeCollector.removeFigure(new Circle()));
+        testShapeCollector.removeFigure(testShapeCollector.shapes, new Circle());
         //Then
         Assert.assertEquals(shapeCollector.getShapes(), testShapeCollector.getShapes());
     }
