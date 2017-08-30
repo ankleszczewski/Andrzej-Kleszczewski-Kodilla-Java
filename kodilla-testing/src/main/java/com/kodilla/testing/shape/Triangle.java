@@ -1,8 +1,9 @@
 package com.kodilla.testing.shape;
 
 public class Triangle implements Shape {
-    public String getShapeName() {
-        return "Triangle";
+    public void getShapeName() {
+
+        //do nothing
     }
 
     public void getField() {
