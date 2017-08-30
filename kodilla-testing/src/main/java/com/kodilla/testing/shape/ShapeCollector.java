@@ -6,20 +6,23 @@ import java.util.List;
 
 public class ShapeCollector {
 
-    List<Shape> shapes = new ArrayList<Shape>();
+    private List<Shape> shapes = new ArrayList<Shape>();
 
 
-    void addFigure(Shape shape) {
+    public void addFigure(Shape shape) {
         shapes.add(shape);
     }
 
-    void removeFigure(Shape shape) {
+    public void removeFigure(Shape shape) {
         shapes.remove(shape);
     }
 
-    Shape getFigure(int i) {
+    public Shape getFigure(int i) {
     return shapes.get(i);
+    }
 
+    public int figuresSize() {
+        return shapes.size();
     }
 
 }
