@@ -48,10 +48,11 @@ public class ShapeCollectorTestSuite {
         shapeCollector.addFigure(circle);
         shapeCollector.addFigure(square);
         shapeCollector.addFigure(triangle);
+        shapeCollector.addFigure(circle);
         //When
         shapeCollector.removeFigure(circle);
         //Then
-        Assert.assertEquals(shapeCollector.figuresSize(), 2);
+        Assert.assertEquals(shapeCollector.figuresSize(), 3);
     }
 
     @Test
@@ -68,7 +69,5 @@ public class ShapeCollectorTestSuite {
         Shape figure = shapeCollector.getFigure(0);
         //Then
         Assert.assertEquals(figure, circle);
-
-
     }
 }

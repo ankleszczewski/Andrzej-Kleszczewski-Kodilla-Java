@@ -8,7 +8,4 @@ class Circle implements Shape {
     public void getField() {
         //do nothing
     }
-
-
-
 }
