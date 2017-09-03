@@ -69,9 +69,9 @@ public class StatisticsCalculatorTestSuite {
         Assert.assertEquals(statisticsCalculator.getUsersQuantity(), 0);
         Assert.assertEquals(statisticsCalculator.getPostsQuantity(), 0);
         Assert.assertEquals(statisticsCalculator.getCommentsQuantity(), 0);
-        Assert.assertEquals(statisticsCalculator.getUsersPostsAverage(), Double.NaN, 0);
-        Assert.assertEquals(statisticsCalculator.getUsersCommentsAverage(), Double.NaN, 0);
-        Assert.assertEquals(statisticsCalculator.getCommentsPerPostAverage(), Double.NaN, 0);
+        Assert.assertEquals(statisticsCalculator.getUsersPostsAverage(), 0, 0);
+        Assert.assertEquals(statisticsCalculator.getUsersCommentsAverage(), 0, 0);
+        Assert.assertEquals(statisticsCalculator.getCommentsPerPostAverage(), 0, 0);
         statisticsCalculator.showStatistics();
 
     }

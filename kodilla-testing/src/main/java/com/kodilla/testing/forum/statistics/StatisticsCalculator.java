@@ -20,8 +20,17 @@ public class StatisticsCalculator  {
         postsQuantity = statistics.postsCount();
         commentsQuantity = statistics.commentsCount();
         usersPostsAverage = (double)postsQuantity / (double)usersQuantity;
+        if ((double)postsQuantity == 0 && (double)usersQuantity == 0) {
+            usersPostsAverage = 0;
+        }
         usersCommentsAverage = (double)commentsQuantity / (double)usersQuantity;
+        if ((double)commentsQuantity == 0 && (double)usersQuantity == 0) {
+            usersCommentsAverage = 0;
+        }
         commentsPerPostAverage = (double)commentsQuantity / (double)postsQuantity;
+        if ((double)commentsQuantity == 0 && (double)postsQuantity == 0) {
+            commentsPerPostAverage = 0;
+        }
 
     }
 
