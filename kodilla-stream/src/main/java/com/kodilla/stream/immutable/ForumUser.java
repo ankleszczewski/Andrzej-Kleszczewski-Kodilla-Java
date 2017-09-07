@@ -9,11 +9,11 @@ public final class ForumUser {
         this.realName = realName;
     }
 
-    String getUsername() {
+    public String getUsername() {
         return username;
     }
 
-    String getRealName() {
+    public String getRealName() {
         return realName;
     }
 }
