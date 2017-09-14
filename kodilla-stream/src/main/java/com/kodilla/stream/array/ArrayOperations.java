@@ -14,7 +14,7 @@ public interface ArrayOperations {
                 .getAsDouble();
 
                 System.out.println("Average: " + average);
-                return average = (double)average;
+                return average;
 
     }
 }
