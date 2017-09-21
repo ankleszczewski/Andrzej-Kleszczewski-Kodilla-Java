@@ -17,7 +17,7 @@ public class FlightSearcher {
 
     if (flights.get(flight.getArrivalAirport()) == null) {
         throw new RouteNotFoundException("Destinantion is not exist");
-    } else if (flights.get(flight.getArrivalAirport()).booleanValue() == TRUE) {
+    } else if (flights.get(flight.getArrivalAirport()).booleanValue()) {
         System.out.println("Destinantion exists and you can fly there");
     } else {
         System.out.println("Destinantion exists but arrive is not possible");
