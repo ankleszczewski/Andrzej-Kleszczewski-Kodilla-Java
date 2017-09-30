@@ -2,9 +2,9 @@ package com.kodilla.good.patterns.challenges.flights;
 
 public class ConnectedFlight {
 
-    public String startPoint;
-    public String endPoint;
-    public String connectPoint;
+    private final String startPoint;
+    private final String endPoint;
+    private final String connectPoint;
 
     public ConnectedFlight(String startPoint, String endPoint, String connectPoint) {
         this.startPoint = startPoint;

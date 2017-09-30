@@ -5,11 +5,11 @@ import java.util.stream.Collectors;
 
 public class ConnectedFlightSearcher {
 
-    ConnectedFlightsTable connectedFlightsTable = new ConnectedFlightsTable();
+    private final ConnectedFlightsTable connectedFlightsTable = new ConnectedFlightsTable();
 
     public List<ConnectedFlight> searchByStartPoint(String startPoint) {
         List<ConnectedFlight> connectedFlight = connectedFlightsTable.getList().stream()
-                .filter(flights -> flights.getStartPoint() == startPoint)
+                .filter(flights -> flights.getStartPoint().equals(startPoint))
                 .collect(Collectors.toList());
         System.out.println("Searching connected flights by Startpoint...");
         connectedFlight.stream()

@@ -1,8 +1,8 @@
 package com.kodilla.good.patterns.challenges.flights;
 
 public class Flight {
-    public String startPoint;
-    public String endPoint;
+    final private String startPoint;
+    final private String endPoint;
 
     public Flight(String startPoint, String endPoint) {
         this.startPoint = startPoint;
