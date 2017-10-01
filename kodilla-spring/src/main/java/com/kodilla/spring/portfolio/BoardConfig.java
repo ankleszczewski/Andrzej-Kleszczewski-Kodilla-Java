@@ -8,10 +8,6 @@ import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class BoardConfig {
-    @Autowired
-    @Qualifier("taskList1")
-    TaskList taskList;
-
 
     @Bean
     public Board board() {
