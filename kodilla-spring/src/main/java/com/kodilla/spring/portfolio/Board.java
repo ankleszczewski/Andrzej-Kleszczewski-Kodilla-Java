@@ -1,6 +1,5 @@
 package com.kodilla.spring.portfolio;
 
-import javafx.concurrent.Task;
 
 public class Board {
     private final TaskList toDoList;
