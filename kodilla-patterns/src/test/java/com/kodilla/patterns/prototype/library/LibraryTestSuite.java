@@ -36,6 +36,13 @@ public class LibraryTestSuite {
         //When
 
         //Then
+        boolean allPresent = true;
+
+        for (Book book : library.getBooks()) {
+            if (!deepCloneLibrary.getBooks().contains(book)) {
+                allPresent = false;
+            }
+        }
         System.out.println(library);
         System.out.println(cloneLibrary);
         System.out.println(deepCloneLibrary);
@@ -43,7 +50,7 @@ public class LibraryTestSuite {
         Assert.assertEquals(9, cloneLibrary.getBooks().size());
         Assert.assertEquals(9, deepCloneLibrary.getBooks().size());
         Assert.assertEquals(cloneLibrary.getBooks(), library.getBooks());
-        Assert.assertEquals(deepCloneLibrary.getBooks(), cloneLibrary.getBooks());
+        Assert.assertTrue(allPresent);
 
     }
 }
