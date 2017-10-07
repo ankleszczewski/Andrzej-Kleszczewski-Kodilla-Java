@@ -8,11 +8,15 @@ public class User {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public String sharePost() {
         return socialPublisher.share();
     }
 
-    public String getName() {
-        return name;
+    public void setSocialPublisher (SocialPublisher socialPublisher) {
+        this.socialPublisher = socialPublisher;
     }
 }

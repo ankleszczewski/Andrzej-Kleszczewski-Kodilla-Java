@@ -22,4 +22,20 @@ public class UserTestSuite {
         Assert.assertEquals(johnShouldUse, "Facebook");
         Assert.assertEquals(kodillsShouldUse, "Twitter");
     }
+
+    @Test
+    public void blictestIndividualSharingStrategy() {
+        //Given
+        User richard = new Millenials("Richard Smith");
+        //When
+        String richardShouldUse = richard.sharePost();
+        System.out.println("Richard should use: " + richardShouldUse);
+        richard.setSocialPublisher(new FacebookPublisher());
+        richardShouldUse = richard.sharePost();
+        System.out.println("Richard now should use: " + richardShouldUse);
+        //Then
+        Assert.assertEquals(richardShouldUse, "Facebook");
+
+
+    }
 }
