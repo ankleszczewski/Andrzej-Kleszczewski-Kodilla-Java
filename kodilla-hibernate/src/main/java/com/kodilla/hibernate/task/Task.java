@@ -12,6 +12,10 @@ public class Task {
     private Date created;
     private int duration;
 
+
+    public Task() {
+    }
+
     public Task(String description, int duration) {
         this.description = description;
         this.created = new Date();
@@ -20,6 +24,7 @@ public class Task {
 
     @Id
     @GeneratedValue
+    @NotNull
     @Column(name = "ID", unique = true)
     public int getId() {
         return id;
