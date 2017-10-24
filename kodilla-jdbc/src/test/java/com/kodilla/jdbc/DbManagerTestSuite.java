@@ -49,7 +49,7 @@ public class DbManagerTestSuite {
                 "from posts p, users u\n" +
                 "where p.user_id = u.id\n" +
                 "group by u.id\n" +
-                "having count(*) >= 2;";
+                "having count(*) >= 1;";
         Statement statement = dbManager.getConnection().createStatement();
         ResultSet rs = statement.executeQuery(sqlQuery);
         //Then
@@ -63,6 +63,6 @@ public class DbManagerTestSuite {
         }
         rs.close();
         statement.close();
-        Assert.assertEquals(1, counter);
+        Assert.assertEquals(3, counter);
     }
 }
