@@ -38,15 +38,33 @@ public class CompanyDaoTestSuite {
         lindaKovalsky.getCompanies().add(greyMatter);
         //When
         companyDao.save(softwareMachine);
-        int softwareMAchineId = softwareMachine.getId();
+        int softwareMachineId = softwareMachine.getId();
         companyDao.save(dataMaesters);
         int dataMaestersId = dataMaesters.getId();
         companyDao.save(greyMatter);
         int greyMatterId = greyMatter.getId();
         //Then
-        Assert.assertNotEquals(0, softwareMAchineId);
+        Assert.assertNotEquals(0, softwareMachineId);
         Assert.assertNotEquals(0, dataMaestersId);
         Assert.assertNotEquals(0, greyMatterId);
+        //CleanUp
+        try {
+            companyDao.delete(softwareMachineId);
+        } catch (Exception e) {
+            //do nothing
+        }
+
+        try {
+            companyDao.delete(dataMaestersId);
+        } catch (Exception e) {
+            //do nothing
+        }
+
+        try {
+            companyDao.delete(greyMatterId);
+        } catch (Exception e) {
+            //do nothing
+        }
         
     }
 }
