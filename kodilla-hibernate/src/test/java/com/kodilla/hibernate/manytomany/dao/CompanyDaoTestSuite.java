@@ -102,9 +102,9 @@ public class CompanyDaoTestSuite {
         Assert.assertEquals(1, employeeLastName.size());
 
         //CleanUp
-        //employeeDao.delete(johnSmithId);
-        //employeeDao.delete(stephanieClarcksonId);
-        //employeeDao.delete(lindaKovalsyId);
+        employeeDao.delete(johnSmithId);
+        employeeDao.delete(stephanieClarcksonId);
+        employeeDao.delete(lindaKovalsyId);
     }
 
     @Test
@@ -144,8 +144,8 @@ public class CompanyDaoTestSuite {
         Assert.assertEquals(1, companyName.size());
 
         //CleanUp
-        //employeeDao.delete(johnSmithId);
-        //employeeDao.delete(stephanieClarcksonId);
-        //employeeDao.delete(lindaKovalsyId);
+        employeeDao.delete(johnSmithId);
+        employeeDao.delete(stephanieClarcksonId);
+        employeeDao.delete(lindaKovalsyId);
     }
 }
