@@ -17,10 +17,10 @@ public class EmployeeFacade {
     private static final Logger LOGGER = LoggerFactory.getLogger(EmployeeFacade.class);
 
     @Autowired
-    CompanyDao companyDao;
+    private CompanyDao companyDao;
 
     @Autowired
-    EmployeeDao employeeDao;
+    private EmployeeDao employeeDao;
 
     public List<Company> findCompanyByName(String name) throws NameFindingException {
         LOGGER.info("Trying to search company");
@@ -36,7 +36,7 @@ public class EmployeeFacade {
 
     public List<Employee> findByLastname(String lastname) throws NameFindingException {
         LOGGER.info("Trying to search for employee");
-        List<Employee> employeeLastname = employeeDao.findByLastname(lastname);
+        List<Employee> employeeLastname = employeeDao.findByLastname("%" + lastname + "%");
         if (!employeeLastname.isEmpty()) {
             LOGGER.info("Employee " + employeeLastname + " found");
             return employeeLastname;
