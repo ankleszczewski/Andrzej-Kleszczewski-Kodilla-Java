@@ -33,7 +33,7 @@ public class EmployeeFacade {
         }
     }
 
-    public List<Employee> findByLastname(String lastname) throws NameFindingException {git commit -m
+    public List<Employee> findByLastname(String lastname) throws NameFindingException {
         List<Employee> employeeLastname = employeeDao.findByLastname("%" + lastname + "%");
         if (!employeeLastname.isEmpty()) {
             LOGGER.info("Employee " + employeeLastname + " found");
