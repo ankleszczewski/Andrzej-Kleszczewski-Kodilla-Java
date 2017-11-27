@@ -23,7 +23,7 @@ public class EmployeeFacade {
     private EmployeeDao employeeDao;
 
     public List<Company> findCompanyByName(String name) throws NameFindingException {
-        List<Company> companyName = companyDao.findCompanyByName(name);
+        List<Company> companyName = companyDao.findCompanyByName("%" + name + "%");
         if (!companyName.isEmpty()) {
             LOGGER.info("Company " + companyName + " found");
             return companyName;
@@ -33,7 +33,7 @@ public class EmployeeFacade {
         }
     }
 
-    public List<Employee> findByLastname(String lastname) throws NameFindingException {
+    public List<Employee> findByLastnameFrag(String lastname) throws NameFindingException {
         List<Employee> employeeLastname = employeeDao.findByLastname("%" + lastname + "%");
         if (!employeeLastname.isEmpty()) {
             LOGGER.info("Employee " + employeeLastname + " found");

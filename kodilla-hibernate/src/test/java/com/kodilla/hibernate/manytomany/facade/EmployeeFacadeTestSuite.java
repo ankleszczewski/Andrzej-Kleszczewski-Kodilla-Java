@@ -40,7 +40,7 @@ public class EmployeeFacadeTestSuite {
         employeeDao.save(lindaKovalsky);
         int lindaKovalsyId = lindaKovalsky.getId();
         //When
-        List<Employee> employeeLastname = employeeFacade.findByLastname("mit");
+        List<Employee> employeeLastname = employeeFacade.findByLastnameFrag("mit");
 
         //Then
         Assert.assertEquals(1, employeeLastname.size());
@@ -65,7 +65,7 @@ public class EmployeeFacadeTestSuite {
         companyDao.save(greyMatter);
         int greyMatterId = greyMatter.getId();
         //When
-        List<Company> companyName = companyDao.findCompanyByName("Grey Matter");
+        List<Company> companyName = employeeFacade.findCompanyByName("atter");
         //Then
         Assert.assertEquals(1, companyName.size());
         //CleanUp

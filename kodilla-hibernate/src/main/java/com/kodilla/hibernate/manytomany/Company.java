@@ -5,10 +5,9 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedNativeQuery(
+@NamedQuery(
         name = "Company.findCompanyByName",
-        query = "SELECT * FROM COMPANIES WHERE SUBSTRING(COMPANY_NAME, 1, 3) = :COMPANY_NAME",
-        resultClass = Company.class
+        query = "FROM Company WHERE name LIKE :COMPANY_NAME"
 )
 @Entity
 @Table(name = "COMPANIES")
