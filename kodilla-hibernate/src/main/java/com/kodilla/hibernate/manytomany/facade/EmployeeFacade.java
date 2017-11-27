@@ -23,7 +23,6 @@ public class EmployeeFacade {
     private EmployeeDao employeeDao;
 
     public List<Company> findCompanyByName(String name) throws NameFindingException {
-        LOGGER.info("Trying to search company");
         List<Company> companyName = companyDao.findCompanyByName(name);
         if (!companyName.isEmpty()) {
             LOGGER.info("Company " + companyName + " found");
@@ -34,8 +33,7 @@ public class EmployeeFacade {
         }
     }
 
-    public List<Employee> findByLastname(String lastname) throws NameFindingException {
-        LOGGER.info("Trying to search for employee");
+    public List<Employee> findByLastname(String lastname) throws NameFindingException {git commit -m
         List<Employee> employeeLastname = employeeDao.findByLastname("%" + lastname + "%");
         if (!employeeLastname.isEmpty()) {
             LOGGER.info("Employee " + employeeLastname + " found");
