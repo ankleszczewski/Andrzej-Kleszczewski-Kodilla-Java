@@ -63,8 +63,6 @@ public class ShopServiceTestSuite {
         } else {
             System.out.println("Access denied. User is not authenticated.");
         }
-
-
     }
 
     @Test
