@@ -54,7 +54,7 @@ public class CrudAppTestSuite {
     }
 
 
-    /*private void sendTestTaskToTrello(String taskName) throws InterruptedException {
+    private void sendTestTaskToTrello(String taskName) throws InterruptedException {
         driver.navigate().refresh();
 
         while(!driver.findElement(By.xpath("//select[1]")).isDisplayed());
@@ -101,7 +101,7 @@ public class CrudAppTestSuite {
         driverTrello.close();
 
         return result;
-    } */
+    }
 
     public void deleteCrudAppTestTask(String taskName) throws InterruptedException {
         driver.findElements(By.xpath("//form[@class=\"datatable__row\"]")).stream()
