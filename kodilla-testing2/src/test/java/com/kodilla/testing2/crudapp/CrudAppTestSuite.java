@@ -66,7 +66,7 @@ public class CrudAppTestSuite {
                 .forEach(theForm -> {
                     WebElement selectElement = theForm.findElement(By.xpath(".//select[1]"));
                     Select select = new Select(selectElement);
-                    select.selectByIndex(2);
+                    select.selectByIndex(1);
 
                     WebElement buttonCreateCard =
                             theForm.findElement(By.xpath(".//button[contains(@class, \"card-creation\")]"));
@@ -117,10 +117,8 @@ public class CrudAppTestSuite {
     @Test
     public void shouldCreateTrelloCard() throws InterruptedException {
         String taskName = createCrudAppTestTask();
-        //sendTestTaskToTrello(taskName);
-        //assertTrue(checkTaskExistsInTrello(taskName));
+        sendTestTaskToTrello(taskName);
+        assertTrue(checkTaskExistsInTrello(taskName));
         deleteCrudAppTestTask(taskName);
     }
-
-
 }
